@@ -17,7 +17,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div style={{ width: "40%", margin: "auto", textAlign: "left" }}>
+    <div style={{ width: "30%", margin: "auto", textAlign: "left" }}>
       <PieChart data={pollData} />
       <PollResults />
     </div>

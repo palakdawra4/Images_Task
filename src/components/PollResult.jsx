@@ -2,17 +2,17 @@ import React from "react";
 
 const pollData = [
   {
-    image: "https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif", // Facepalm GIF
+    image: "https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif", 
     percentage: "90%",
     votes: 1024,
   },
   {
-    image: "https://media.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif", // Staring GIF
+    image: "https://media.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif", 
     percentage: "8%",
     votes: 80,
   },
   {
-    image: "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif", // Minion Awesome Sauce GIF
+    image: "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif", 
     percentage: "2%",
     votes: 20,
   },
@@ -39,11 +39,17 @@ const PollResults = () => {
           display: flex;
           align-items: center;
           margin: 10px 0;
+          padding: 10px;
+          transition: background-color 0.3s ease; /* Smooth transition */
+        }
+        .poll-item:hover {
+          background-color: #F7F8F8; /* Background color on hover */
         }
         .poll-gif {
-          width: 100px;
+          width: 150px;
           height: auto;
-          border-radius: 10px;
+          border: 5px solid #E8EAEC; /* Border around the GIF */
+          border-radius: 20px;
           margin-right: 15px;
         }
         .poll-percentage {
