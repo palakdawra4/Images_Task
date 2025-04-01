@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PieChart from "./components/Piechart"; // Make sure the filename matches
+import PollResults from "./components/PollResult";
 
-function App() {
+// Define the shape of the poll data
+interface PollData {
+  labels: string[];
+  values: number[];
+  colors: string[];
+}
+
+const App: React.FC = () => {
+  const pollData: PollData = {
+    labels: ["Yes - 90% (1,024)", "No - 10% (103)"],
+    values: [1024, 103],
+    colors: ["#9166cc", "#e4aa1f"],
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ width: "40%", margin: "auto", textAlign: "left" }}>
+      <PieChart data={pollData} />
+      <PollResults />
     </div>
   );
-}
+};
 
 export default App;
